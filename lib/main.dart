@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/screens/meal_detail_screen.dart';
+
 
 import 'screens/categories_meals_screen.dart';
 import 'screens/categories_screen.dart';
+import 'screens/filters_screen.dart';
+import 'screens/meal_detail_screen.dart';
+import 'screens/tabs_screen_bottom.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
@@ -41,9 +45,10 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       // initialRoute: '/',
       routes: {
-        '/': (context) => CategoriesScreen(),
+        '/': (context) => TabsScreen(),
         CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen(),
-        MealDetailScreen.routeName: (context) => MealDetailScreen()
+        MealDetailScreen.routeName: (context) => MealDetailScreen(),
+        FilterScreen.routeName: (context) => FilterScreen()
       },
       // onGenerateRoute: (settings) {
       //   if (settings.name == '/') {
