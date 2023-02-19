@@ -10,7 +10,6 @@ class CategoriesScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'DeliMeal',
-          style: TextStyle(fontFamily: 'Raleway'),
         ),
       ),
       body: GridView(
